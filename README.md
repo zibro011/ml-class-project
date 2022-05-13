@@ -23,19 +23,27 @@ In the notebook, you can see the different modeling and preprocessing techniques
 ### Experiment 1
 The most successful model for experiment one was the Voting Ensemble with an AUC of 0.81937. Voting Ensemble is a machine learning model that combines predictions from multiple other models.
 
+The worst performing category was green glass. This makes sense because the different types of glass are hard to distinguish, and the green color makes it hard to distinguish from some biological images. The best performing category was clothing.
+
 ### Experiment 2
 The most successful model for experiment two was also the Voting Ensemble with an AUC of 0.81375.
+
+Similar to experiment one, green glass was the worst performing category while clothing was the best performing category.
 
 ### Experiment 3
 The most successful model for experiment three was also the Voting Ensemble with an AUC of 0.81453.
 
+Similar to experiments one and two, green glass was the worst performing category while clothing was the best performing category.
+
 ### Experiment 4
 The most successful model for experiment four was Logistic Regression using the Standard Scaler Wrapper with an AUC of 0.80634. Logistic Regression is a classification algorithm that predicts the probability of a categorical variable, and the Standard Scaler Wrapper normalizes features to a value between 0 and 1 and feeds them into a wrapper model that follows a greedy search approach.
+
+This experiment confirms that green glass was the worst performing category while clothing was the best performing category in all four experiments.
 
 ## Results
 After comparing the different models, we can see that my first estimate of k (5) was actually the best performing which leads me to believe the optimal k value is probably somewhere around 5. We can also see that the Voting Ensemble model was the best performing. This makes sense because this method combines the predictions of multiple other models which increases its accuracy. With a highest AUC of 0.81937, our model is not too bad.
 
-In the results section of the notebook, I tested my deployed model with images from the existing dataset. Unfortunately, only four of the eleven categories were successfully categorized. 
+In the results section of the notebook, I tested my deployed model with images from the existing dataset. Unfortunately, only four of the eleven categories were successfully categorized. I also added a breakdown of the ROC for each category. The clothing category was best performing which makes sense because the pictures were more similar in style and there were more samples of that category. The clothing test was successful which is what we would expect.
 
 ## Future Plans & Thoughts
 If I get the time to come back to this project, I would love to use all the available data as well as train and optimize my models manually. I think that those two adjustments would improve my model's performance immensely. 
